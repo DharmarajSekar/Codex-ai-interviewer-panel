@@ -1,0 +1,27 @@
+_format_version: "3.0"
+services:
+  - name: api
+    url: http://api:8080
+    routes:
+      - name: api-route
+        paths: ["/api"]
+        strip_path: false
+  - name: realtime
+    url: http://realtime:8081
+    routes:
+      - name: ws-route
+        paths: ["/ws"]
+plugins:
+  - name: cors
+    config:
+      origins: ["https://app.example.com"]
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+      headers: ["Authorization", "Content-Type"]
+      credentials: true
+  - name: rate-limiting
+    config:
+      minute: 1200
+      policy: local
+  - name: jwt
+    config:
+      claims_to_verify: ["exp", "nbf"]
