@@ -1,3 +1,12 @@
+# AI Interviewer Backend
+
+Async FastAPI backend for interview orchestration with Ollama + LangChain + ChromaDB + Redis + PostgreSQL.
+
+## Run
+
+```bash
+docker compose up --build
+```
 # AI Interviewer Platform (Infrastructure Skeleton)
 
 Production-grade monorepo skeleton for an AI Interviewer platform using open-source technologies.
