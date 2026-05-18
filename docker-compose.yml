@@ -118,7 +118,7 @@ services:
       dockerfile: Dockerfile
     env_file: .env
     ports:
-      - "8000:8000"
+      - "8000:10000"
     depends_on:
       - postgres
       - redis

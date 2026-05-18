@@ -1,3 +1,6 @@
+import os
+
+import uvicorn
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 
 from app.api.v1.router import router as v1_router
@@ -24,3 +27,7 @@ async def interview_socket(websocket: WebSocket, session_id: int) -> None:
             await manager.broadcast(session_id, payload)
     except WebSocketDisconnect:
         manager.disconnect(session_id, websocket)
+
+
+if __name__ == "__main__":
+    uvicorn.run("app.main:app", host="0.0.0.0", port=int(os.getenv("PORT", "10000")))
