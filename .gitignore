@@ -2,3 +2,26 @@ __pycache__/
 *.pyc
 .env
 .chroma/
+# Node
+node_modules/
+.next/
+dist/
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+
+# Data
+redis-data/
+postgres-data/
+chroma-data/
