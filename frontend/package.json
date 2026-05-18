@@ -1,0 +1,8 @@
+{
+  "name": "recruiter-analytics-frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Use your preferred bundler (Vite/Next) to mount src/main.jsx'"
+  }
+}
