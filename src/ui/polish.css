@@ -1,0 +1,53 @@
+:root {
+  --panel-bg: linear-gradient(180deg, #0f172a 0%, #0b1220 100%);
+  --accent: #38bdf8;
+  --text: #e2e8f0;
+}
+
+.interview-shell {
+  background: var(--panel-bg);
+  color: var(--text);
+  border-radius: 18px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.turn-row {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: enter 320ms cubic-bezier(.2, .7, .2, 1) forwards;
+}
+
+.typing-indicator::after {
+  content: "";
+  width: 24px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 999px;
+  background: radial-gradient(circle, var(--accent) 30%, transparent 31%) 0 50%/8px 8px repeat-x;
+  animation: pulse 1.1s ease-in-out infinite;
+}
+
+.realtime-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.8);
+  animation: live 1.8s infinite;
+}
+
+@keyframes enter {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: .45; }
+  50% { opacity: 1; }
+}
+
+@keyframes live {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
