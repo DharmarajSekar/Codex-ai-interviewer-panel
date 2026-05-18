@@ -1,9 +1,4 @@
 {
-  "name": "recruiter-analytics-frontend",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "echo 'Use your preferred bundler (Vite/Next) to mount src/main.jsx'"
   "name": "ai-interviewer-frontend",
   "private": true,
   "version": "0.1.0",
