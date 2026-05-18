@@ -1,6 +1,15 @@
 {
   "compilerOptions": {
     "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "outDir": "dist",
+    "esModuleInterop": true
+  },
+  "include": ["src"]
     "lib": ["dom", "dom.iterable", "es2022"],
     "allowJs": false,
     "skipLibCheck": true,
