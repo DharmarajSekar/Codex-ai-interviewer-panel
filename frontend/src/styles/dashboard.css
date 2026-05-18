@@ -1,0 +1,6 @@
+.dashboard-grid { display: grid; gap: 16px; padding: 24px; font-family: Inter, sans-serif; }
+.kpi-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border-bottom: 1px solid #ddd; padding: 8px; text-align: left; }
+@media (max-width: 768px) { .kpi-strip { grid-template-columns: 1fr; } }
